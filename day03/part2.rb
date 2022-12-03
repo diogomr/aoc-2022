@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 
-UPPERCASE_ORD_BASELINE = 64 - 26
-DOWNCASE_ORD_BASELINE = 96
+UPPERCASE_ORD_BASELINE = ("A".ord - 1) - 26
+DOWNCASE_ORD_BASELINE = ("a".ord) - 1
 
 def downcase?(char)
-  char.ord > 90
+  char.ord > "Z".ord
 end
 
 lines = File.read("input.txt").split("\n").each_slice(3).to_a
